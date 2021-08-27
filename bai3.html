@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array=[];
+    let n=prompt("How many element you want in array?");
+    n=parseInt(n);
+    for(let i=0;i<n;i++){
+        let element=prompt("Please push element to array from index 0");
+        element=parseInt(element);
+        array[i]=element;
+    }
+    document.write(array+"<br>");
+    function checkPrime(number){
+        if(number<2) return false;
+        if(number<4) return true;
+        else{
+            for(let i=2;i<number;i++){
+                if(number%i==0) return false;
+            }
+            return true;
+        }
+    }
+    let sum=0;
+    let count=0;
+    count=parseInt(count);
+    for(let i=0;i<array.length;i++){
+        if(checkPrime(array[i])===true){
+            document.write(array[i]+"<br>");
+            count++;
+            sum=sum+array[i];
+        }
+    }
+    document.write("Quantity of prime in array is : "+count+" and sum of prime is : "+sum);
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array=[];
+    let n=prompt("How many element you want in array?");
+    n=parseInt(n);
+    for(let i=0;i<n;i++){
+        let element=prompt("Please push element to array from index 0");
+        array[i]=element;
+    }
+    document.write(array+"<br>");
+    let checkingElement=prompt("Tell me what element you want to check in array?");
+    let count=0;
+    count=parseInt(count);
+    for(let i=0;i<array.length;i++){
+        if(array[i]==checkingElement){
+            count++;
+        }
+    }
+    document.write("Your searching element : "+checkingElement+" show up "+count+" time");
+</script>
+</body>
+</html>
